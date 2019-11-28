@@ -1,0 +1,124 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/style_type.css">
+	
+	 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/dff38904a8.js"></script>
+	<title></title>
+  <style>
+.wrapper{
+  position: relative;
+}
+#aHolder{
+  position: relative; 
+  z-index: 2;
+}
+.twoLayer{
+  position: absolute;
+  z-index: 10;
+   left: 0;
+  top: 0;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="wrapper">
+    <img id="aHolder" src="1.jpg" height="620" width="1350">
+  
+    <div class="twoLayer">
+    <form name="aForm" >
+        <select name="aSelect" class="myRebit"     >
+        <option value="1.jpg">Кролик1</option>
+        <option value="2.jpg">Кролик2</option>
+        <option value="3.jpg ">Кролик3</option>
+        <option value="4.jpg">Кролик4</option>
+        </select>
+    </form>
+  </div>
+</div>
+   
+
+
+
+
+
+<script>
+window.onload = ()=>{
+  document.querySelector(".myRebit").onchange=(e)=>{
+   
+     document.querySelector("#aHolder").src = e.target.value;
+  }
+}
+
+
+
+</script>
+ 
+  
+
+</body>
+<script type="text/javascript">
+
+
+
+  
+</script>
+<!-- 
+<script type="text/javascript">
+  ob = document.querySelector("#myVPScheck");
+  ob.onclick=()=>{
+    console.log("77")
+  }
+        let myVPScheck=()=>{
+        console.log("+++")
+        }
+          let data = Array();
+          let left = 0,right=0,porcia =5 ;
+        let currentPage =0;
+          for(i=0; i != 200;i++){
+            data[i] = i;   
+          }
+          console.log(data);
+          let paginator=(leftPosition,rightPosition,porcia)=>{
+            console.log("____________")
+            data.forEach((item,i,data)=>{
+              // console.log(i)
+              // console.log(leftPosition)
+              // console.log(rightPosition)
+              if((i >= leftPosition) && (i < rightPosition)) console.log(item);
+            })
+
+          }
+
+          let objNext = document.querySelector(".next");
+          objNext.onclick=()=>{
+            currentPage++;
+            left = (currentPage - 1)*porcia;
+            right = currentPage * porcia;
+           paginator(left,right,porcia);
+            
+          }   
+          let objNext1 = document.querySelector(".prev");
+          objNext1.onclick=()=>{  
+          currentPage--;
+           left = (currentPage - 1)*porcia;
+           right = currentPage * porcia;
+           paginator(left,right,porcia); 
+           
+          }   
+
+
+          // objNext2.mouseover=()=>{  
+          // console.log("0000")
+           
+          // }   
+
+
+
+</script> -->
+</html>
